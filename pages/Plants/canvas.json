@@ -98,7 +98,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Add New Plant",
+                      "text": "Add a New Plant",
                       "key": "v5t8ah1edn",
                       "isDeprecated": false,
                       "rightColumn": 25,
