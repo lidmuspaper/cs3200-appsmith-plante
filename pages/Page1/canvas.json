@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 470,
+          "bottomRow": 580,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -366,8 +366,66 @@
               "originalTopRow": 40,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 46,
+              "originalBottomRow": 47,
               "isInline": true,
+              "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Input1",
+              "displayName": "Input",
+              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+              "searchTags": [
+                "form",
+                "text input",
+                "number",
+                "textarea"
+              ],
+              "topRow": 51,
+              "bottomRow": 58,
+              "parentRowSpace": 10,
+              "labelWidth": 5,
+              "autoFocus": false,
+              "type": "INPUT_WIDGET_V2",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.75,
+              "resetOnSubmit": true,
+              "leftColumn": 8,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "labelPosition": "Top",
+              "labelStyle": "",
+              "inputType": "TEXT",
+              "isDisabled": false,
+              "key": "3gip6s5oyz",
+              "labelTextSize": "0.875rem",
+              "isRequired": false,
+              "isDeprecated": false,
+              "rightColumn": 28,
+              "dynamicHeight": "FIXED",
+              "widgetId": "uu0wyigwhr",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "showStepArrows": false,
+              "minWidth": 450,
+              "isVisible": true,
+              "label": "Label",
+              "version": 2,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "responsiveBehavior": "fill",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "iconAlign": "left",
+              "defaultText": "",
               "minDynamicHeight": 4
             }
           ]
