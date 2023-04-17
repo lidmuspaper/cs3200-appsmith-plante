@@ -1,0 +1,3 @@
+{
+	user_id: {{appsmith.store.user_id}}
+}
