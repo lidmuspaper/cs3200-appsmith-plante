@@ -1,8 +1,28 @@
 {
   "pages": [
     {
-      "id": "Page1",
+      "id": "Plants",
+      "isDefault": false
+    },
+    {
+      "id": "Users",
       "isDefault": true
+    },
+    {
+      "id": "Weather Conditions",
+      "isDefault": false
+    },
+    {
+      "id": "Plant Schedules",
+      "isDefault": false
+    },
+    {
+      "id": "Illness Diagnosis",
+      "isDefault": false
+    },
+    {
+      "id": "Plant Info",
+      "isDefault": false
     }
   ],
   "viewMode": false,
