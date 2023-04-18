@@ -19,6 +19,10 @@
     {
       "id": "Plant Info",
       "isDefault": false
+    },
+    {
+      "id": "Weather Conditions",
+      "isDefault": false
     }
   ],
   "viewMode": false,
