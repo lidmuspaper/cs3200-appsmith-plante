@@ -9,10 +9,6 @@
       "isDefault": true
     },
     {
-      "id": "Weather Conditions",
-      "isDefault": false
-    },
-    {
       "id": "Plant Schedules",
       "isDefault": false
     },
