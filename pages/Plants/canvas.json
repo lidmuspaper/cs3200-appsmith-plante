@@ -114,8 +114,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
+                      "originalTopRow": 1,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 5,
                       "fontSize": "1.25rem",
                       "minDynamicHeight": 4
                     },
@@ -123,6 +125,7 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "Button1",
+                      "onClick": "{{Add_new_plant.run()}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -135,6 +138,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 47,
                       "dynamicBindingPathList": [
                         {
@@ -159,8 +167,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "hug",
+                      "originalTopRow": 64,
                       "disabledWhenInvalid": true,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 68,
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
@@ -204,8 +214,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "hug",
+                      "originalTopRow": 64,
                       "disabledWhenInvalid": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 68,
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
@@ -262,8 +274,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
+                      "originalTopRow": 6,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 13,
                       "iconAlign": "left",
                       "defaultText": "",
                       "minDynamicHeight": 4
@@ -326,8 +340,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
+                      "originalTopRow": 14,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 21,
                       "minDynamicHeight": 4
                     },
                     {
@@ -375,6 +391,8 @@
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 31,
+                      "originalBottomRow": 39,
                       "step": 1,
                       "showMarksLabel": true
                     },
@@ -424,6 +442,8 @@
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 22,
+                      "originalBottomRow": 30,
                       "step": ".1",
                       "showMarksLabel": true
                     },
@@ -455,23 +475,13 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "options": "{{Get_all_locations.data.map(p => ({label: p.location_name, value: p.location_name}))}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "20qo8qks1k",
@@ -490,32 +500,20 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
+                      "originalTopRow": 40,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 47,
                       "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Input2",
-                      "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                      "searchTags": [
-                        "form",
-                        "text input",
-                        "number",
-                        "textarea"
-                      ],
                       "topRow": 48,
-                      "bottomRow": 55,
                       "tooltip": "How long (in days) between watering?",
-                      "parentRowSpace": 10,
                       "labelWidth": 5,
-                      "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
                       "animateLoading": true,
-                      "parentColumnSpace": 7.99609375,
-                      "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
@@ -526,29 +524,45 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "labelPosition": "Top",
                       "labelStyle": "",
                       "inputType": "NUMBER",
                       "isDisabled": false,
-                      "key": "5oy6loq1hr",
-                      "labelTextSize": "0.875rem",
                       "isRequired": false,
-                      "isDeprecated": false,
-                      "rightColumn": 21,
                       "dynamicHeight": "FIXED",
-                      "widgetId": "c72ujsqigd",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "showStepArrows": false,
-                      "minWidth": 450,
                       "isVisible": true,
-                      "label": "Watering Schedule",
                       "version": 2,
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 55,
+                      "widgetName": "Input2",
+                      "displayName": "Input",
+                      "searchTags": [
+                        "form",
+                        "text input",
+                        "number",
+                        "textarea"
+                      ],
+                      "bottomRow": 55,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "hideCard": false,
+                      "parentColumnSpace": 7.99609375,
+                      "dynamicTriggerPathList": [],
+                      "labelPosition": "Top",
+                      "key": "5oy6loq1hr",
+                      "labelTextSize": "0.875rem",
+                      "isDeprecated": false,
+                      "rightColumn": 21,
+                      "widgetId": "c72ujsqigd",
+                      "minWidth": 450,
+                      "label": "Watering Schedule",
                       "parentId": "6wk6sy7lex",
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
-                      "isLoading": false,
                       "responsiveBehavior": "fill",
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalTopRow": 48,
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
                       "defaultText": "",
@@ -556,26 +570,12 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Input3",
-                      "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                      "searchTags": [
-                        "form",
-                        "text input",
-                        "number",
-                        "textarea"
-                      ],
                       "topRow": 48,
-                      "bottomRow": 55,
                       "tooltip": "How long (in days) between fertilizing?",
-                      "parentRowSpace": 10,
                       "labelWidth": 5,
-                      "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
                       "animateLoading": true,
-                      "parentColumnSpace": 7.99609375,
-                      "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
                       "leftColumn": 22,
                       "dynamicBindingPathList": [
@@ -586,29 +586,45 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "labelPosition": "Top",
                       "labelStyle": "",
                       "inputType": "NUMBER",
                       "isDisabled": false,
-                      "key": "5oy6loq1hr",
-                      "labelTextSize": "0.875rem",
                       "isRequired": false,
-                      "isDeprecated": false,
-                      "rightColumn": 42,
                       "dynamicHeight": "FIXED",
-                      "widgetId": "zekrca6pxm",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "showStepArrows": false,
-                      "minWidth": 450,
                       "isVisible": true,
-                      "label": "Fertilizing Schedule",
                       "version": 2,
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 55,
+                      "widgetName": "Input3",
+                      "displayName": "Input",
+                      "searchTags": [
+                        "form",
+                        "text input",
+                        "number",
+                        "textarea"
+                      ],
+                      "bottomRow": 55,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "hideCard": false,
+                      "parentColumnSpace": 7.99609375,
+                      "dynamicTriggerPathList": [],
+                      "labelPosition": "Top",
+                      "key": "5oy6loq1hr",
+                      "labelTextSize": "0.875rem",
+                      "isDeprecated": false,
+                      "rightColumn": 42,
+                      "widgetId": "zekrca6pxm",
+                      "minWidth": 450,
+                      "label": "Fertilizing Schedule",
                       "parentId": "6wk6sy7lex",
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
-                      "isLoading": false,
                       "responsiveBehavior": "fill",
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalTopRow": 48,
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
                       "defaultText": "",
@@ -616,26 +632,12 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Input4",
-                      "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                      "searchTags": [
-                        "form",
-                        "text input",
-                        "number",
-                        "textarea"
-                      ],
                       "topRow": 48,
-                      "bottomRow": 55,
                       "tooltip": "How long (in days) between repotting?",
-                      "parentRowSpace": 10,
                       "labelWidth": 5,
-                      "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
                       "animateLoading": true,
-                      "parentColumnSpace": 7.99609375,
-                      "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
                       "leftColumn": 43,
                       "dynamicBindingPathList": [
@@ -646,29 +648,45 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "labelPosition": "Top",
                       "labelStyle": "",
                       "inputType": "NUMBER",
                       "isDisabled": false,
-                      "key": "5oy6loq1hr",
-                      "labelTextSize": "0.875rem",
                       "isRequired": false,
-                      "isDeprecated": false,
-                      "rightColumn": 63,
                       "dynamicHeight": "FIXED",
-                      "widgetId": "rt94tcxyib",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "showStepArrows": false,
-                      "minWidth": 450,
                       "isVisible": true,
-                      "label": "Repotting Schedule",
                       "version": 2,
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 55,
+                      "widgetName": "Input4",
+                      "displayName": "Input",
+                      "searchTags": [
+                        "form",
+                        "text input",
+                        "number",
+                        "textarea"
+                      ],
+                      "bottomRow": 55,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "hideCard": false,
+                      "parentColumnSpace": 7.99609375,
+                      "dynamicTriggerPathList": [],
+                      "labelPosition": "Top",
+                      "key": "5oy6loq1hr",
+                      "labelTextSize": "0.875rem",
+                      "isDeprecated": false,
+                      "rightColumn": 63,
+                      "widgetId": "rt94tcxyib",
+                      "minWidth": 450,
+                      "label": "Repotting Schedule",
                       "parentId": "6wk6sy7lex",
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
-                      "isLoading": false,
                       "responsiveBehavior": "fill",
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalTopRow": 48,
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
                       "defaultText": "",
@@ -705,20 +723,7 @@
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "options": "[\n  {\n    \"label\": \"Nitrogen Fertilizer\",\n    \"value\": \"Nitrogen Fertilizer\"\n  },\n  {\n    \"label\": \"Phosphorus Fertilizer\",\n    \"value\": \"Phosphorus Fertilizer\"\n  },\n  {\n    \"label\": \"Potassium Fertilizer\",\n    \"value\": \"Potassium Fertilizer\"\n  },\n  {\n    \"label\": \"Micronutrient Fertilizer\",\n    \"value\": \"Micronutrient Fertilizer\"\n  }\n]",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "20qo8qks1k",
@@ -737,8 +742,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
+                      "originalTopRow": 56,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 63,
                       "minDynamicHeight": 4
                     },
                     {
@@ -772,20 +779,7 @@
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "options": "[\n\t{\n    \"label\": \"Standard\",\n    \"value\": \"standard\"\n  },\n  {\n    \"label\": \"Compact\",\n    \"value\": \"compact\"\n  },\n  {\n    \"label\": \"Nitrogen-rich\",\n    \"value\": \"nitrogen-rich\"\n  },\n  {\n    \"label\": \"Orchid\",\n    \"value\": \"orchid\"\n  },\n\t{\n    \"label\": \"Flowering\",\n    \"value\": \"flowering\"\n  }\n]",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "20qo8qks1k",
@@ -804,32 +798,20 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
+                      "originalTopRow": 56,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 63,
                       "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Input5",
-                      "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                      "searchTags": [
-                        "form",
-                        "text input",
-                        "number",
-                        "textarea"
-                      ],
                       "topRow": 56,
-                      "bottomRow": 63,
                       "tooltip": "How big (in liters) is your pot?",
-                      "parentRowSpace": 10,
                       "labelWidth": 5,
-                      "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
                       "animateLoading": true,
-                      "parentColumnSpace": 7.99609375,
-                      "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
                       "leftColumn": 22,
                       "dynamicBindingPathList": [
@@ -840,29 +822,45 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "labelPosition": "Top",
                       "labelStyle": "",
                       "inputType": "NUMBER",
                       "isDisabled": false,
-                      "key": "5oy6loq1hr",
-                      "labelTextSize": "0.875rem",
                       "isRequired": false,
-                      "isDeprecated": false,
-                      "rightColumn": 42,
                       "dynamicHeight": "FIXED",
-                      "widgetId": "3mi5hx23qf",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "showStepArrows": false,
-                      "minWidth": 450,
                       "isVisible": true,
-                      "label": "Pot Size",
                       "version": 2,
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 63,
+                      "widgetName": "Input5",
+                      "displayName": "Input",
+                      "searchTags": [
+                        "form",
+                        "text input",
+                        "number",
+                        "textarea"
+                      ],
+                      "bottomRow": 63,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "hideCard": false,
+                      "parentColumnSpace": 7.99609375,
+                      "dynamicTriggerPathList": [],
+                      "labelPosition": "Top",
+                      "key": "5oy6loq1hr",
+                      "labelTextSize": "0.875rem",
+                      "isDeprecated": false,
+                      "rightColumn": 42,
+                      "widgetId": "3mi5hx23qf",
+                      "minWidth": 450,
+                      "label": "Pot Size",
                       "parentId": "6wk6sy7lex",
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
-                      "isLoading": false,
                       "responsiveBehavior": "fill",
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalTopRow": 56,
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
                       "defaultText": "",
@@ -899,10 +897,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 3,
+              "originalTopRow": 2,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 73,
+              "originalBottomRow": 72,
               "minDynamicHeight": 10
             },
             {
@@ -1244,6 +1242,14 @@
         },
         "layoutOnLoadActions": [
           [
+            {
+              "id": "Plants_Get_all_locations",
+              "name": "Get_all_locations",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Plants_Types_of_plants",
               "name": "Types_of_plants",

@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "Types_of_plants",
+    "name": "Get_all_locations",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/j/get_all_types"
+        "url": "web:4000/j/get_locations"
       },
       "invalids": [],
       "messages": [],
@@ -47,7 +47,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Plants_Types_of_plants",
+  "id": "Plants_Get_all_locations",
   "deleted": false,
-  "gitSyncId": "643da574dd75344c2eefca69_643db3a2dd75344c2eefca92"
+  "gitSyncId": "643da574dd75344c2eefca69_643ddb8e87e2b77823904139"
 }

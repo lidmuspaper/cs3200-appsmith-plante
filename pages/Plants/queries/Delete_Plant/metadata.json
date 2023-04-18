@@ -30,7 +30,7 @@
       "queryParameters": [],
       "body": "",
       "bodyFormData": [],
-      "httpMethod": "GET",
+      "httpMethod": "DELETE",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
