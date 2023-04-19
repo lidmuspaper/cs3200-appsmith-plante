@@ -1,0 +1,3 @@
+{
+	"user_id": {{get_latest.data[0].user_id}}
+}
