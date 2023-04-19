@@ -1,0 +1,10 @@
+{
+	"plant_id": {{add_scheduleCopy.data.plant_idCopy}},
+	"type_fertilizer": {{add_scheduleCopy.data.type_fertilizerCopy}},
+	"soil_type": {{add_scheduleCopy.data.soil_typeCopy}},
+	"watering_amount": {{add_scheduleCopy.data.watering_amountCopy}},
+	"watering_timer": {{add_scheduleCopy.data.watering_timerCopy}},
+  	"fertilizing_timer": {{add_scheduleCopy.data.fertilizing_timerCopy}},
+  	"repotting_timer": {{add_scheduleCopy.data.repotting_timerCopy}},
+	"pot_size": {{add_scheduleCopy.data.pot_sizeCopy}}
+}

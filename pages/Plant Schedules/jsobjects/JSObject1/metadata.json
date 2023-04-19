@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Plant Schedules",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Plant Schedules_JSObject1",
+  "deleted": false,
+  "gitSyncId": "643da574dd75344c2eefca69_64402b8a46e48523df1163d8"
+}

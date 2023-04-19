@@ -1,0 +1,3 @@
+{
+	"plant_id": {{Plant.selectedOptionValue}}
+}
