@@ -1827,28 +1827,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Plant Schedules_get_fert_pot_soil",
-              "name": "get_fert_pot_soil",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "Plant.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Plant Schedules_get_last_water_fert_repot",
-              "name": "get_last_water_fert_repot",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "Plant.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Plant Schedules_Get_all_user_plants",
               "name": "Get_all_user_plants",
               "confirmBeforeExecute": false,
@@ -1875,18 +1853,6 @@
               "pluginType": "API",
               "jsonPathKeys": [
                 "appsmith.store.user_id"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Plant Schedules_get_water_fert_repot",
-              "name": "get_water_fert_repot",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "Plant.selectedOptionValue"
               ],
               "timeoutInMillisecond": 10000
             }
