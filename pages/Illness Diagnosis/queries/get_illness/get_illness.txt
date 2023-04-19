@@ -1,0 +1,3 @@
+{
+	"symptoms": {{select_diagnosis.data.Select1}}
+}

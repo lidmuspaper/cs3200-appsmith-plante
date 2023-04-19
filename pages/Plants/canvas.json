@@ -1358,6 +1358,7 @@
               "resetFormOnClick": false,
               "boxShadow": "none",
               "widgetName": "Button3",
+              "onClick": "{{Delete_Plant.run(() => Get_all_user_plants.run(), () => {})}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -1372,7 +1373,11 @@
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 22.15625,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
               "leftColumn": 35,
               "dynamicBindingPathList": [
                 {
